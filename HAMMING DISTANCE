@@ -1,0 +1,59 @@
+#include <iostream>
+
+#include <string>
+
+
+using namespace std;
+
+
+int main(){
+
+  string str1, str2;
+
+  
+
+  cout << "Enter a one word: ";
+
+  cin >> str1;
+
+  cout << str1 << endl;
+
+
+  cout << "Enter another word: ";
+
+  cin >> str2;
+
+  cout << str2 << endl;
+
+
+  int len1, len2, len, hamming = 0;
+
+  len1 = str1.length();
+
+  len2 = str2.length();
+
+
+  if(len1 >= len2)
+
+    len = len1;
+
+  else 
+
+    len = len2;
+
+
+  for(int i = 0; i < len; i++) {
+
+      if(str1[i] != str2[i])
+
+        hamming += 1;
+
+    }  
+
+  
+
+  cout << "Hamming's distance in this case is " << hamming << "." <<  endl;
+
+  return 0;
+
+}
